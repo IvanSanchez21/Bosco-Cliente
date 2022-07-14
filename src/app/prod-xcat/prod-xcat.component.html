@@ -1,0 +1,28 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Productos buscados por una categoría (Categoría: Comida)</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de productos buscados por una categoría</h5>
+  
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prodXcat of prodXcats">
+            <td>{{ prodXcat.id }}</td>
+            <td>{{ prodXcat.nombre }}</td>
+            <td>{{ prodXcat.precio }}</td>
+            <td>{{ prodXcat.stock }}</td>
+            <td>{{ prodXcat.descripcion }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>

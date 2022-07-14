@@ -1,0 +1,28 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Productos buscados por el código de una sucursal (Código: 1)</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de productos buscados por el código de una sucursal</h5>
+  
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Descripción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let prodXsuc of prodXsucs">
+            <td>{{ prodXsuc.id }}</td>
+            <td>{{ prodXsuc.nombre }}</td>
+            <td>{{ prodXsuc.precio }}</td>
+            <td>{{ prodXsuc.stock }}</td>
+            <td>{{ prodXsuc.descripcion }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
