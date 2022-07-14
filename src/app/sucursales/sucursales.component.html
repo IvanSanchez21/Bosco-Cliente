@@ -1,0 +1,30 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Sucursales</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de sucursales</h5>
+  
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Latitud</th>
+            <th>Altitud</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sucursal of sucursales">
+            <td>{{ sucursal.id }}</td>
+            <td>{{ sucursal.name }}</td>
+            <td>{{ sucursal.direccion }}</td>
+            <td>{{ sucursal.telefono }}</td>
+            <td>{{ sucursal.latitud }}</td>
+            <td>{{ sucursal.altitud }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>

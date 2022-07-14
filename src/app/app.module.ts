@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent} from './footer/footer.component';
@@ -14,6 +13,10 @@ import { ProductoService } from './productos/producto.service';
 import { FormComponent } from './clientes/form.component';
 import { FormsModule } from '@angular/forms';
 import { formatCurrency } from '@angular/common';
+import { SucursalesComponent } from './sucursales/sucursales.component';
+import { SucursalService } from './sucursales/sucursal.service';
+import { CategoriasComponent } from './categorias/categorias.component';
+import { CategoriaService } from './categorias/categoria.service';
 
 const routes: Routes = [
   {path: '', redirectTo: '/productos', pathMatch: 'full'},
@@ -21,7 +24,9 @@ const routes: Routes = [
   {path: 'clientes', component: ClientesComponent},
   {path: 'productos', component: ProductoComponent},
   {path: 'clientes/form', component: FormComponent},
-  {path: 'clientes/form/:id', component: FormComponent}
+  {path: 'clientes/form/:id', component: FormComponent},
+  {path: 'sucursales', component: SucursalesComponent},
+  {path: 'categorias', component: CategoriasComponent}
 ];
 
 @NgModule({
@@ -32,7 +37,9 @@ const routes: Routes = [
     DirectivaComponent,
     ClientesComponent,
     ProductoComponent,
-    FormComponent
+    FormComponent,
+    SucursalesComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule
   ],
-  providers: [ClienteService, ProductoService],
+  providers: [ClienteService, ProductoService, SucursalService, CategoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

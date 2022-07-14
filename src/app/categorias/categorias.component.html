@@ -1,0 +1,22 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">Categorías</div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de categorías</h5>
+  
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let categoria of categorias">
+            <td>{{ categoria.id }}</td>
+            <td>{{ categoria.nombre }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
