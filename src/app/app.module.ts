@@ -21,6 +21,8 @@ import { ProdXsucComponent } from './prod-xsuc/prod-xsuc.component';
 import { ProdXSucService } from './prod-xsuc/prodXsuc.service';
 import { ProdXcatComponent } from './prod-xcat/prod-xcat.component';
 import { ProdXCatService } from './prod-xcat/prodXcat.service';
+//import { DetalleComponent } from './clientes/detalle/detalle.component';
+import { LoginComponent } from './usuarios/login.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/productos', pathMatch: 'full'},
@@ -32,7 +34,9 @@ const routes: Routes = [
   {path: 'sucursales', component: SucursalesComponent},
   {path: 'categorias', component: CategoriasComponent},
   {path: 'prodXsuc', component: ProdXsucComponent},
-  {path: 'prodXcat', component: ProdXcatComponent}
+  {path: 'prodXcat', component: ProdXcatComponent},
+  {path: 'login', component: LoginComponent }
+  
 ];
 
 @NgModule({
@@ -47,7 +51,8 @@ const routes: Routes = [
     SucursalesComponent,
     CategoriasComponent,
     ProdXsucComponent,
-    ProdXcatComponent
+    ProdXcatComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,11 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     FormsModule
   ],
-  providers: [ClienteService, ProductoService, SucursalService, CategoriaService, ProdXSucService, ProdXCatService],
+  providers: [ClienteService, ProductoService, SucursalService, CategoriaService, ProdXSucService, ProdXCatService
+  
+   ],
+  
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
