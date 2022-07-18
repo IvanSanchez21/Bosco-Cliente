@@ -10,6 +10,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductoComponent } from './productos/productos.component';
 import { ProductoService } from './productos/producto.service';
+//import { FormComponent } from './tarjetas/form.component';
 import { FormComponent } from './clientes/form.component';
 import { FormsModule } from '@angular/forms';
 import { formatCurrency } from '@angular/common';
@@ -23,6 +24,8 @@ import { ProdXcatComponent } from './prod-xcat/prod-xcat.component';
 import { ProdXCatService } from './prod-xcat/prodXcat.service';
 //import { DetalleComponent } from './clientes/detalle/detalle.component';
 import { LoginComponent } from './usuarios/login.component';
+import { TarjetasComponent } from './tarjetas/tarjetas.component';
+import { TarjetaService } from './tarjetas/tarjeta.service';
 
 const routes: Routes = [
   {path: '', redirectTo: '/productos', pathMatch: 'full'},
@@ -35,8 +38,11 @@ const routes: Routes = [
   {path: 'categorias', component: CategoriasComponent},
   {path: 'prodXsuc', component: ProdXsucComponent},
   {path: 'prodXcat', component: ProdXcatComponent},
-  {path: 'login', component: LoginComponent }
-  
+  {path: 'login', component: LoginComponent },
+  {path: 'tarjetas', component: TarjetasComponent},
+  {path: 'tarjetas/form', component: FormComponent},
+  {path: 'tarjetas/form/:id', component: FormComponent}
+
 ];
 
 @NgModule({
@@ -52,7 +58,8 @@ const routes: Routes = [
     CategoriasComponent,
     ProdXsucComponent,
     ProdXcatComponent,
-    LoginComponent
+    LoginComponent,
+    TarjetasComponent
   ],
   imports: [
     BrowserModule,
@@ -61,10 +68,10 @@ const routes: Routes = [
     FormsModule
   ],
   providers: [ClienteService, ProductoService, SucursalService, CategoriaService, ProdXSucService, ProdXCatService
-  
+  , TarjetaService
    ],
-  
-  
+
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
