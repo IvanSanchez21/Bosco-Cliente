@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  titulo: string = 'Por favor Sign In!';
+  titulo: string = 'Por favor Inicie Sesión!';
   usuario: Usuario;
 
   constructor(private authService: AuthService, private router: Router) {
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   login(): void {
     console.log(this.usuario);
     if (this.usuario.correo == null || this.usuario.password == null) {
-      swal.fire('Error Login', 'Username o password vacías!', 'error');
+      swal.fire('Error Login', 'Username o password vacíos!', 'error');
       return;
     }
 
@@ -32,9 +32,13 @@ export class LoginComponent implements OnInit {
       console.log(response);
       
       let id = response.id;
-      console.log("Id del Usuario " + id)
-     
-      this.router.navigate(['/productos']);
+
+      let rol = response.rol;
+      console.log("Id del Cliente " + id)
+      console.log("Rol del Usuario " + rol)
+      
+      this.router.navigate(['/clientes']);
+
       swal.fire('Login', `Hola ${this.usuario.correo}, has iniciado sesión con éxito!`, 'success');
     }, err => {
       if (err.status == 400) {
