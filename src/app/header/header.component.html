@@ -27,28 +27,18 @@
           <a class="nav-link" routerLink="/categorias">Categorias</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" routerLink="/productos" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Productos
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Todos</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/prodXsuc">Sucursales</a></li>
-            <li><a class="dropdown-item" href="/prodXcat">Categorías</a></li>
-          </ul>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/productos">Productos</a>
         </li>
       </ul>
       
       <ul class="navbar-nav navbar-right">
-        <li ><a [routerLink]="['/login']" class="btn btn-outline-primary">Sign In</a></li>
+        <li ><a [routerLink]="['/login']" class="btn btn-outline-primary">Iniciar Sesión</a></li>
   
         <li class="dropdown">
-          <a class="btn btn-outline-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-             <button class="dropdown-item" type="submit">Sign Out</button>
-          </div>
+          <a class="btn btn-outline-primary" href='/login' role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cerrar Sesión</a>
+
         </li>
       </ul>
       
