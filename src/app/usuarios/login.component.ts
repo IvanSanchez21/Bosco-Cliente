@@ -32,12 +32,10 @@ export class LoginComponent implements OnInit {
       console.log(response);
       
       let id = response.id;
-      let rol = response.rol;
       console.log("Id del Usuario " + id)
-      console.log("Rol del Usuario " + rol)
-      
-      this.router.navigate(['/clientes']);
-      swal.fire('Login', `Hola ${response.correo}, has iniciado sesión con éxito!`, 'success');
+     
+      this.router.navigate(['/productos']);
+      swal.fire('Login', `Hola ${this.usuario.correo}, has iniciado sesión con éxito!`, 'success');
     }, err => {
       if (err.status == 400) {
         swal.fire('Error Login', 'Usuario o clave incorrectas!', 'error');
