@@ -30,10 +30,14 @@ export class TarjetasComponent implements OnInit {
       confirmButtonText: 'Si, Eliminar!'
     }).then((result) => {
       if (result.isConfirmed) {
-
+        for(let i=0;i<this.tarjetas.length; i++){
+          if(this.tarjetas[i].id == tarjetas.id){
+            this.tarjetas.splice(i,1);
+          }
+        }
         this.tarjetaService.delete(tarjetas.id).subscribe(
           response => {
-            this.tarjetas = this.tarjetas.filter(tarjetas => tarjetas !== tarjetas)
+            //this.tarjetas = this.tarjetas.filter(tarjetas => tarjetas !== tarjetas)
             swal.fire(
               'Tarjeta Eliminado!',
               `Tarjeta ${tarjetas.nombre} eliminado con éxito.`,

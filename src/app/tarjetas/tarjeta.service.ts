@@ -18,7 +18,7 @@ export class TarjetaService {
 
   getTarjetas(): Observable<PagoTarjeta[]> {
     //return of(CLIENTES);
-    return this.http.get(this.urlEndPoint).pipe(
+    return this.http.get(this.urlEndPoint+'/'+localStorage.getItem('ClienteID')).pipe(
       map(response => response as PagoTarjeta[])
     );
   }
