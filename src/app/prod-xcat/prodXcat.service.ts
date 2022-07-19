@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ProdXCatService{
-    private urlEndPoint: string = 'http://localhost:8080/productoCategoria/Comida';
+    private urlEndPoint: string = 'http://localhost:8080/productoCategoria/Frutas';
     constructor(private http: HttpClient){}
 
     getProdXCat(): Observable<ProdXCat[]>{
