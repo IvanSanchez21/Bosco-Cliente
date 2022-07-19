@@ -31,13 +31,10 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.usuario).subscribe(response => {
       console.log(response);
       
-      let id = response.id;
-
-      let rol = response.rol;
+      let id = response;
       console.log("Id del Cliente " + id)
-      console.log("Rol del Usuario " + rol)
       
-      this.router.navigate(['/clientes']);
+      this.router.navigate(['/productos']);
 
       swal.fire('Login', `Hola ${this.usuario.correo}, has iniciado sesión con éxito!`, 'success');
     }, err => {
