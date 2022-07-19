@@ -19,6 +19,7 @@ export class FormComponent implements OnInit {
 
     ngOnInit() {
       this.cargarTarjeta();
+      console.log(localStorage.getItem('ClienteID'));
     }
 
 

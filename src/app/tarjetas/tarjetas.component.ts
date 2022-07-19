@@ -22,7 +22,7 @@ export class TarjetasComponent implements OnInit {
   delete(tarjetas: PagoTarjeta): void {
     swal.fire({
       title: 'Está seguro?',
-      text: '¿Seguro que desea eliminar al cliente ${tarjetas.nombre} ${tarjetas.numero}?',
+      text: '¿Seguro que desea eliminar la tarjeta?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

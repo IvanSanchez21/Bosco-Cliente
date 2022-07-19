@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       console.log("Id del Cliente " + id)
       console.log("Rol del Usuario " + rol)
       
-      this.router.navigate(['/clientes']);
+      this.router.navigate(['/productos']);
 
       swal.fire('Login', `Hola ${this.usuario.correo}, has iniciado sesión con éxito!`, 'success');
     }, err => {

@@ -5,5 +5,5 @@ export class PagoTarjeta {
     numero: string;
     nombre:string;
     fecha:string;
-    cliente: Cliente;
+    cliente: string = localStorage.getItem('ClienteID');
   }
