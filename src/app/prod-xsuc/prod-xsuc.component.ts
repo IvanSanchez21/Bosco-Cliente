@@ -10,12 +10,14 @@ export class ProdXsucComponent implements OnInit {
 
   prodXsucs: ProdXSuc[];
 
-  constructor(private prodxsucService: ProdXSucService) { }
+  constructor(private prodxsucService: ProdXSucService) { 
+  }
 
   ngOnInit(): void {
     this.prodxsucService.getProdXSuc().subscribe(
       prodXsucs => this.prodXsucs = prodXsucs
     );
+    console.log(localStorage.getItem('ClienteID'));
   }
 
 }

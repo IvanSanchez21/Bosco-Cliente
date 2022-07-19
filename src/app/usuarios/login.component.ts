@@ -32,6 +32,10 @@ export class LoginComponent implements OnInit {
       console.log(response);
       
       let id = response;
+      localStorage.setItem('ClienteID', response);
+      console.log(localStorage.getItem('ClienteID'));
+      console.log(id);
+      let rol = response.rol;
       console.log("Id del Cliente " + id)
       
       this.router.navigate(['/productos']);
