@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
       console.log(id);
       let rol = response.rol;
       console.log("Id del Cliente " + id)
-      console.log("Rol del Usuario " + rol)
       
       this.router.navigate(['/productos']);
 
