@@ -32,6 +32,8 @@ import { ProdXsucComponent2 } from './prod-xsuc2/prod-xsuc2.component';
 import { ProdXSucService2 } from './prod-xsuc2/prod-xsuc2.service';
 import { ProdXcatComponent1 } from './prod-xcat1/prod-xcat1.component';
 import { ProdXCatService1 } from './prod-xcat1/prodXcat1.service';
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { PedidoService } from './pedidos/pedidos.service';
 
 const routes: Routes = [
   {path: '', redirectTo: '/productos', pathMatch: 'full'},
@@ -50,7 +52,8 @@ const routes: Routes = [
   {path: 'tarjetas/form/:id', component: FormComponent},
   {path: 'prodXsuc1', component: ProdXsucComponent1},
   {path: 'prodXsuc2', component: ProdXsucComponent2},
-  {path: 'prodXcat1', component: ProdXcatComponent1}
+  {path: 'prodXcat1', component: ProdXcatComponent1},
+  {path: 'pedidos', component: PedidosComponent}
 
 ];
 
@@ -71,7 +74,8 @@ const routes: Routes = [
     TarjetasComponent,
     ProdXsucComponent1,
     ProdXsucComponent2,
-    ProdXcatComponent1
+    ProdXcatComponent1,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +84,7 @@ const routes: Routes = [
     FormsModule
   ],
   providers: [ClienteService, ProductoService, SucursalService, CategoriaService, ProdXSucService, ProdXCatService, 
-    TarjetaService, ProdXSucService1, ProdXSucService2, ProdXCatService1
+    TarjetaService, ProdXSucService1, ProdXSucService2, ProdXCatService1, PedidoService
    ],
 
 
