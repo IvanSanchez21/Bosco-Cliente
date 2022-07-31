@@ -20,4 +20,17 @@ export class PedidoService {
       return this.http.delete<Pedidos>(this.urlEndPoint+ '/' +id, {headers: this.httpHeaders})
     }
 
+    crearPedido(idProducto: number, cantidad: number): Observable<Pedidos>{
+      const data = {
+        "latitud": 123,
+        "longitud": 123,
+        "estado": "activo",
+        "cantidadProducto": cantidad,
+        "idCliente":localStorage.getItem("ClienteID"),
+        "idSucursal":1,
+        "idProducto":idProducto
+      }
+      return this.http.post<Pedidos>(this.urlEndPoint+'/create', JSON.stringify(data),{headers: this.httpHeaders})
+    }
+
 }

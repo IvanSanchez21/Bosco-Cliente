@@ -36,7 +36,7 @@ import { PedidosComponent } from './pedidos/pedidos.component';
 import { PedidoService } from './pedidos/pedidos.service';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/productos', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'directivas', component: DirectivaComponent},
   {path: 'clientes', component: ClientesComponent},
   {path: 'productos', component: ProductoComponent},

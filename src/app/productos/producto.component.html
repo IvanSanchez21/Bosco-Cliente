@@ -15,9 +15,9 @@
                             <div class="col-sm-12">
                                 <label>{{producto.descripcion}}</label>                                   
                             </div>
-                            <div class=" col-sm-12 text-center">                                
-                                <a href="" class="btn btn2 btn-outline-primary">Agregar a Carrito<i class="fas fa-cart-plus"></i></a>
-                                <a href="" class="btn btn-danger">Comprar</a>
+                            <div class=" col-sm-12 text-center">  
+                                <input type="number" #cantidad min="1" max="10" step="1" value="1">            
+                                <a (click)='crearPedido(producto.id, cantidad.value)' class="btn btn-danger">Comprar</a>
                             </div>                         
                         </div>
                     </div>

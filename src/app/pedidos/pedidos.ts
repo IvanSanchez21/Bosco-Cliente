@@ -7,4 +7,7 @@ export class Pedidos{
   costoEnvio: number;
   llegada:string;
   nombreProducto:string;
+  idCliente: number;
+  idSucursal: number;
+  idProducto: number;
 } 
