@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 export class PedidoService {
     private urlEndPoint: string = 'http://localhost:8080/pedidos';
     private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
+    
     constructor(private http: HttpClient) { }
   
     getPedidos(): Observable<Pedidos[]> {
